@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSP</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <header></header>
+
+
+    <div class="container">
+
+        <div class="page">
+            <nav>
+                <a href="content_1.html"><img class="scroll_2" src="img/main_1_890.jpg" alt="main_1"></a>
+                <a href="content_1.html"><img class="scroll_2" src="img/sub_1_ri.jpg" alt="main_1"></a>
+                <a href="content_1.html"><img class="scroll_2" src="img/sub_1_le.jpg" alt="main_1"></a>                
+            </nav>
+            <ul class="scroll_1">
+                <li>S</li>
+                <li>P</li>
+                <li>R</li>
+                <li>O</li>
+                <li>U</li>
+                <li>T</li>
+            </ul>
+            <figure class="scroll_3">
+                <h5>Campaign
+                    2021</h5>
+            </figure>
+        </div>
+
+        <nav class="count">1 / 3</nav>
+    </div>
+
+    <footer></footer>
+    <audio src="main-theme.mp3" controls></audio>
+
+
+    <script type="text/javascript">
+        $(function(){
+            var container = document.querySelector('.container');
+
+                // json
+                $.ajax({
+                    url:'data.json',
+                    success:function(data){
+                        var main_img = '',idx=0,loop,delta;
+
+                        container.addEventListener('mousewheel',function(e){
+                            // delta = e.originalEvent.wheelDelta;
+
+                            clearTimeout(loop);
+                            loop = setTimeout(function(){
+                                var ul = document.querySelector('.page ul');
+                                var subimg = document.querySelectorAll('.page nav a img');
+                                var subtext = document.querySelector('.page figure');
+
+                                
+                                ul.setAttribute('class','active');
+                                subtext.setAttribute('class','active');
+                                for(var i=0; i<subimg.length; i++){
+                                    subimg[i].setAttribute('class','active');
+                                }
+
+                                // if( delta > 0 ){
+                                //     setTimeout(function(){
+                                //         var li = '';
+                                //         idx++;
+                                //     },1700);
+                                // }
+
+                                setTimeout(function(){
+                                    var li = '';
+                                    idx++;
+
+                                    if( idx == subimg.length ){ idx = 0 }
+                                    for(var i=0; i< data.gallery[idx][1].length;i++){ //
+                                        li += "<li>"+ data.gallery[idx][1][i] +"</li>" ; //
+                                    }
+                                    $('.count').text(idx+1 +' / 3');
+
+
+                                    main_img = "<nav>",
+                                    main_img += "<a href="+data.gallery[idx][3]+">",
+                                    main_img += "<img class='scroll_2' src="+data.gallery[idx][0].split(',')[0]+">", //split ,로 json파일 이미지 구분?
+                                    main_img += "</a>",
+                                    main_img += "<a href="+data.gallery[idx][3]+">",
+                                    main_img += "<img class='scroll_2' src="+data.gallery[idx][0].split(',')[1]+">",
+                                    main_img += "</a>",
+                                    main_img += "<a href="+data.gallery[idx][3]+">",
+                                    main_img += "<img class='scroll_2' src="+data.gallery[idx][0].split(',')[2]+">",
+                                    main_img += "</a></nav>",
+                                    main_img += "<ul class='scroll_1'>"+li+"</ul>",
+                                    main_img += "<figure class='scroll_3'>",
+                                    main_img += "<h5>"+ data.gallery[idx][2] +"</h5>",
+                                    main_img += "</figure>";                                        
+                                
+                                    $('.page').html(main_img);
+
+                                },1700);
+
+                            },30);
+
+                        });
+                    }
+                });
+        });
+
+	</script>
+</body>
+</html>

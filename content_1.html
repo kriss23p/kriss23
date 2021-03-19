@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSP</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header></header>
+
+
+        <article class="content_1">
+            <p>
+                <span>PROJECT 1 - 5</span>
+            </p>
+            <ul class="content1_text_1">
+                <li>W</li>
+                <li>E</li>
+                <li>A</li>
+                <li>R</li>
+                <li>+</li>
+                <li>T</li>
+                <li>R</li>
+                <li>B</li>
+                <li>L</li>
+            </ul>
+            <div class="scroll_1">
+                <video autoplay loop muted><source src="img/2/fcropped.mp4" type="video/mp4"></video>
+                <div class="content1_text_2">
+                    <p><span>
+                        <strong>CREDITS</strong>
+                    </span></p>
+                    <p><span><strong>Alexander Laguta </strong> BRANDING & UX/UI</span></p>
+                    <p><span><strong>Kate Laguta </strong> ANIMATIONS</span></p>
+                    <p><span><strong>salt & Pepper </strong> DEVELOPMENT</span></p>
+                </div>
+            </div>
+
+            <div class="scroll_2"><div><figure></figure><h2 class="scroll_2_2">001</h2></div></div>
+
+            <div class="scroll_3">
+                <p><span>OVERVIEW</span></p>
+                <p><span>A new path to self expression. WEAR+TRBL</span></p>
+                <p><span>is the world's first screen in a garment.</span></p>
+                <p><span>Taking cues from the material design we</span></p>
+                <p><span>established a visual language of distortion</span></p>
+                <p><span>and glitch effects to tie everything together</span></p>
+                <p><span>seamlessly across brand and e-commerce.</span></p>
+            </div>
+
+            <div class="scroll_4"><img src="img/con_1/1.jpg" alt="content_1"></div>
+
+            <div class="scroll_5"><video autoplay loop muted><source src="img/con_1/2.mp4" type="video/mp4"></video></div>
+            
+            <div class="scroll_6"><img src="img/con_1/3.jpg" alt="content_1"></div>
+
+            <div class="scroll_7">
+                <video autoplay loop muted><source src="img/con_1/5.mp4" type="video/mp4"></video>
+                <img src="img/con_1/6.jpg" alt="content_1">
+            </div>
+
+            <div class="scroll_8"><h2>&copy 2021</h2></div>
+        </article>
+    </div>
+
+    <footer></footer>
+    <audio src="main-theme.mp3" controls></audio>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $('.content_1 .scroll_1').on('mousewheel',function(e){
+            var delta = e.originalEvent.wheelDelta;
+
+            if(delta < 0){$('.content_1 .scroll_2 .scroll_2_2').css({
+                display: 'block'
+            });}
+        });
+
+        $('.content_1 .scroll_1').on('mousewheel',function(e){
+                var delta = e.originalEvent.wheelDelta;
+
+                if(delta < 0){$('.content_1 .scroll_3 p span').css({
+                    display: 'block'
+                });}
+        });
+
+        $('.content_1 .scroll_2').on('mousewheel',function(e){
+                var delta = e.originalEvent.wheelDelta;
+
+                if(delta < 0){$('.content_1 .scroll_4 img').css({
+                    display: 'block'
+                });}
+        });
+
+        $('.content_1 .scroll_4').on('mousewheel',function(e){
+                var delta = e.originalEvent.wheelDelta;
+
+                if(delta < 0){$('.content_1 .scroll_5 video').css({
+                    display: 'block'
+                });}
+        });
+
+        $('.content_1 .scroll_5').on('mousewheel',function(e){
+                var delta = e.originalEvent.wheelDelta;
+
+                if(delta < 0){$('.content_1 .scroll_6 img').css({
+                    display: 'block'
+                });}
+        });
+
+        $('.content_1 .scroll_6').on('mousewheel',function(e){
+                var delta = e.originalEvent.wheelDelta;
+
+                if(delta < 0){$('.content_1 .scroll_7 video').css({
+                    display: 'block'
+                });}
+                if(delta < 0){$('.content_1 .scroll_7 img').css({
+                    display: 'block'
+                });}
+        });
+
+        $('.content_1 .scroll_7').on('mousewheel',function(e){
+                var delta = e.originalEvent.wheelDelta;
+
+                if(delta < 0){$('.content_1 .scroll_8 h2').css({
+                    display: 'block'
+                });}
+        });
+	</script>
+</body>
+</html>

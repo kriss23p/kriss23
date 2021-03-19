@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSP</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header></header>
+
+        <article class="content_3">
+            <p>
+                <span>PROJECT 2 - 5</span>
+            </p>
+            <ul class="content3_text_1">
+                <li>P</li>
+                <li>E</li>
+                <li>T</li>
+                <li>I</li>
+                <li>O</li>
+                <li>L</li>
+                <li>E</li>
+            </ul>
+            <div class="scroll3">
+                <img src="img/3/3_01.jpg" alt="content_3">
+                <div class="content3_text_2">
+                    <p><span>
+                        <strong>CREDITS</strong>
+                    </span></p>
+                    <p><span><strong>Alexander Laguta </strong> BRANDING & UX/UI</span></p>
+                    <p><span><strong>Kate Laguta </strong> ANIMATIONS</span></p>
+                    <p><span><strong>Anton Kozhevnikov </strong> VASE CONCEPT</span></p>
+                    <p><span><strong>salt & Pepper </strong> DEVELOPMENT</span></p>
+                </div>
+            </div>
+
+            <div class="scroll3_1"><h2>002</h2></div>
+
+            <div class="scroll3_2">
+                <p><span>OVERVIEW</span></p>
+                <p><span>The Petiole vase is constructed and designed</span></p>
+                <p><span>to give your interior a touch of nature. A "vase</span></p>
+                <p><span>with a shift" The Petiole Vase concept is an</span></p>
+                <p><span>award-winning concept brought to life by</span></p>
+                <p><span>Anton Kozhevnikov.</span></p>
+                <p><span></span></p>
+                <p><span>Taking cues from the design of the vase</span></p>
+                <p><span>itself the UI/UX and branding were thoroughly</span></p>
+                <p><span>extension of the physical piece. Perfectly</span></p>
+                <p><span>balanced and organic</span></p>
+            </div>
+
+
+            <div class="scroll3_3"><video autoplay loop muted><source src="img/3/petiole-1.mp4" type="video/mp4"></video></div>
+
+            <div class="scroll3_4"><img src="img/3/3_02.jpg" alt="content_3"></div>
+
+            <div class="scroll3_5"><video autoplay loop muted><source src="img/3/petiole-2.mp4" type="video/mp4"></video></div>
+
+            <div class="scroll3_6">
+                <img src="img/3/3_03.jpg" alt="content_3">
+                <img src="img/3/3_04.jpg" alt="content_3">
+            </div>
+
+            <div class="scroll3_7"><h2>&copy 2020</h2></div>
+        </article>
+    </div>
+
+    <footer></footer>
+    <audio src="main-theme.mp3" controls></audio>
+
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+
+        $('.content_3 .scroll3').on('mousewheel',function(e){
+            var delta = e.originalEvent.wheelDelta;
+
+            if(delta < 0){$('.content_3 .scroll3_1 h2').css({
+                display: 'block'
+            });}
+        });
+
+        $('.content_3 .scroll3').on('mousewheel',function(e){
+            var delta = e.originalEvent.wheelDelta;
+
+            if(delta < 0){$('.content_3 .scroll3_2 p span').css({
+                display: 'block'
+            });}
+        });
+
+        $('.content_3 .scroll3_2').on('mousewheel',function(e){
+            var delta = e.originalEvent.wheelDelta;
+
+            if(delta < 0){$('.content_3 .scroll3_3 video').css({
+                display: 'block'
+            });}
+        });
+
+        $('.content_3 .scroll3_3').on('mousewheel',function(e){
+            var delta = e.originalEvent.wheelDelta;
+
+            if(delta < 0){$('.content_3 .scroll3_4 img').css({
+                display: 'block'
+            });}
+        });
+
+        $('.content_3 .scroll3_5').on('mousewheel',function(e){
+            var delta = e.originalEvent.wheelDelta;
+
+            if(delta < 0){$('.content_3 .scroll3_6 img').css({
+                display: 'block'
+            });}
+        });
+
+        $('.content_3 .scroll3_6').on('mousewheel',function(e){
+            var delta = e.originalEvent.wheelDelta;
+
+            if(delta < 0){$('.content_3 .scroll3_7 h2').css({
+                display: 'block'
+            });}
+        });
+	</script>
+</body>
+</html>
